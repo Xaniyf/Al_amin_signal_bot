@@ -1,4 +1,5 @@
 import os
+import time
 import requests
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
@@ -10,8 +11,11 @@ requests.post(
     url,
     data={
         "chat_id": CHAT_ID,
-        "text": "✅ Bot muvaffaqiyatli ishga tushdi!"
+        "text": "✅ Bot Render'da muvaffaqiyatli ishga tushdi!"
     }
 )
 
 print("Bot started.")
+
+while True:
+    time.sleep(60)
